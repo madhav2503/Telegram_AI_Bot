@@ -1,4 +1,4 @@
-pymongo==10.10.10.10
+pymongo==4.6.1
 python-telegram-bot==21.10
 google-generativeai==0.8.4
 google_search_results==2.4.2
