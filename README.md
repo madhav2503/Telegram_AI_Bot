@@ -1,7 +1,3 @@
-<<<<<<< HEAD
-# Telegram_AI_Bot
- AI-powered Telegram chatbot with Gemini 1.5 Flash, NLP, image analysis, and web search. Supports natural conversations, text analysis, and smart automation. Stores user profiles &amp; chat history in MongoDB for a personalized experience. Built with Python, Telegram API, Google Gemini, and SerpAPI. 🚀 Live 24/7 on Railway.app!
-=======
 # 🤖 AI-Powered Telegram Chatbot  
 
 An advanced AI chatbot for Telegram with **Gemini 1.5 Flash**, **NLP capabilities**, **image analysis**, **web search**, and **MongoDB integration**. It provides intelligent responses, processes images, and retrieves web search results while storing user profiles and chat history.  
