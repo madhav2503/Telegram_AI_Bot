@@ -28,6 +28,19 @@ except OSError:
     subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
     nlp = spacy.load("en_core_web_sm")
 
+import subprocess
+
+try:
+    import torch
+except ImportError:
+    print("Installing PyTorch...")
+    subprocess.run(["pip", "install", "torch"])
+
+try:
+    from transformers import pipeline
+except ImportError:
+    print("Installing Transformers library...")
+    subprocess.run(["pip", "install", "transformers"])
 
 sentiment_analyzer = pipeline("sentiment-analysis")
 summarizer = pipeline("summarization")
