@@ -9,6 +9,7 @@ from pymongo import MongoClient
 from serpapi import GoogleSearch
 from PIL import Image
 import spacy
+import subprocess
 from transformers import pipeline
 
 
@@ -19,7 +20,14 @@ OPENAI_API_KEY = os.getenv("OPENAI_API_KEY")
 SERPAPI_KEY = os.getenv("SERPAPI_KEY")
 MONGO_URI = os.getenv("MONGO_URI")
 
-nlp = spacy.load("en_core_web_sm")
+
+try:
+    nlp = spacy.load("en_core_web_sm")
+except OSError:
+    print("Downloading spaCy model...")
+    subprocess.run(["python", "-m", "spacy", "download", "en_core_web_sm"])
+    nlp = spacy.load("en_core_web_sm")
+
 
 sentiment_analyzer = pipeline("sentiment-analysis")
 summarizer = pipeline("summarization")
